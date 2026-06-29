@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Initialization environment
       env:
@@ -55,7 +55,7 @@ jobs:
         make -j$(nproc) || make -j1 || make -j1 V=s
 
     - name: Upload bin directory
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: OpenWrt_firmware
         path: openwrt/bin/targets/ramips/mt7621/
